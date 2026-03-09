@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      body {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        gap: 40px;
+
+        font-family: Arial, Helvetica, sans-serif;
+
+        background-color: gold;
+
+        color: white;
+
+        background-image: url("img/star.png.webp");
+        background-size: 80%;
+
+        animation-name: stars;
+        animation-duration: 30s;
+        animation-timing-function: ease-in-out;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+        overflow: hidden;
+      }
+
+      @keyframes stars {
+        0% {
+          background-position: 0% 0%;
+        }
+
+        100% {
+          background-position: 100% 100%;
+        }
+      }
+      .question {
+        user-select: none;
+        font-size: 50px;
+        text-align: center;
+        background-color: gold;
+        padding: 50px;
+        border-radius: 10px;
+        border: 5px solid white;
+        width: 60%;
+      }
+
+      .reponses {
+        display: flex;
+        gap: 30px;
+      }
+
+      .score {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        font-size: 50px;
+      }
+
+      .inter {
+        display: none;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        z-index: 9999;
+        background-color: rgb(0, 0, 0);
+        transform: translate(-50%, -50%);
+
+        width: 100vw;
+        height: 100vh;
+
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+      .inter__text {
+        font-size: 200px;
+      }
+      .btn {
+        cursor: pointer;
+        user-select: none;
+        padding: 50px;
+        font-size: 25px;
+        border-radius: 10px;
+        border: none;
+        background-color: #f29d35;
+        color: white;
+        transition: all 0.5s;
+        position: relative;
+        top: 0px;
+        left: 0px;
+
+        border: 5px solid white;
+      }
+
+      .btn:hover {
+        background-color: #f2b138;
+
+        top: -5px;
+        left: 5px;
+
+        box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.5);
+        -webkit-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.5);
+        -moz-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.5);
+      }
+      .resultat_score {
+        font-size: 100px;
+      }
+
+      .resultat {
+        display: none;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        z-index: 9999;
+        background-color: #46a6a6;
+        transform: translate(-50%, -50%);
+
+        width: 100vw;
+        height: 100vh;
+
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="resultat" id="resultat">
+      <div class="resultat_score" id="resultat_score">321321</div>
+      <button class="btn" id="replay">Rejouer</button>
+    </div>
+
+    <div class="inter" id="inter">
+      <div class="inter__text" id="inter__text">Bravo !</div>
+      <button class="btn" id="inter__btn">Passer à la question suivante</button>
+    </div>
+
+    <div id="score" class="score">0</div>
+
+    <div class="question" id="question">qldsdfjlqsdfj ?</div>
+
+    <div class="reponses">
+      <button class="btn" id="reponse1" data-index="0">qsdf</button>
+      <button class="btn" id="reponse2" data-index="1">qsdf</button>
+      <button class="btn" id="reponse3" data-index="2">qsdf</button>
+    </div>
+
+    <script src="quizz.js"></script>
+  </body>
+</html>

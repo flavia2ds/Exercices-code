@@ -1,0 +1,86 @@
+{
+  "good":"Bravo!",
+  "bad":"Bouh ! le nul",
+  "quizz": [
+    {
+      "question": "Quel organe humain consomme environ 20% de l'énergie totale du corps ?",
+      "reponses": [
+        { "text": "Le cœur", "isOk": false },
+        { "text": "Le cerveau", "isOk": true },
+        { "text": "Le foie", "isOk": false }
+      ]
+    },
+    {
+      "question": "Quelle est la capitale de l'Australie ?",
+      "reponses": [
+        { "text": "Sydney", "isOk": false },
+        { "text": "Melbourne", "isOk": false },
+        { "text": "Canberra", "isOk": true }
+      ]
+    },
+    {
+      "question": "En quelle année l'homme a-t-il marché sur la Lune pour la première fois ?",
+      "reponses": [
+        { "text": "1969", "isOk": true },
+        { "text": "1972", "isOk": false },
+        { "text": "1965", "isOk": false }
+      ]
+    },
+    {
+      "question": "Quel est le symbole chimique de l'Or ?",
+      "reponses": [
+        { "text": "Ag", "isOk": false },
+        { "text": "Au", "isOk": true },
+        { "text": "Fe", "isOk": false }
+      ]
+    },
+    {
+      "question": "Qui a peint la fresque de la Chapelle Sixtine ?",
+      "reponses": [
+        { "text": "Léonard de Vinci", "isOk": false },
+        { "text": "Raphaël", "isOk": false },
+        { "text": "Michel-Ange", "isOk": true }
+      ]
+    },
+    {
+      "question": "Combien de cœurs possède une pieuvre ?",
+      "reponses": [
+        { "text": "1", "isOk": false },
+        { "text": "2", "isOk": false },
+        { "text": "3", "isOk": true }
+      ]
+    },
+    {
+      "question": "Quelle est la planète la plus proche du Soleil ?",
+      "reponses": [
+        { "text": "Vénus", "isOk": false },
+        { "text": "Mercure", "isOk": true },
+        { "text": "Mars", "isOk": false }
+      ]
+    },
+    {
+      "question": "Quel écrivain a créé le personnage de Sherlock Holmes ?",
+      "reponses": [
+        { "text": "Arthur Conan Doyle", "isOk": true },
+        { "text": "Agatha Christie", "isOk": false },
+        { "text": "Maurice Leblanc", "isOk": false }
+      ]
+    },
+    {
+      "question": "Quelle est la langue la plus parlée au Brésil ?",
+      "reponses": [
+        { "text": "L'espagnol", "isOk": false },
+        { "text": "Le portugais", "isOk": true },
+        { "text": "Le brésilien", "isOk": false }
+      ]
+    },
+    {
+      "question": "Quel pays a remporté la Coupe du Monde de football en 2018 ?",
+      "reponses": [
+        { "text": "L'Allemagne", "isOk": false },
+        { "text": "L'Argentine", "isOk": false },
+        { "text": "La France", "isOk": true }
+      ]
+    }
+  ]
+}

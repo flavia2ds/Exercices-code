@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Piano</title>
+
+    <style>
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+        height: 100vh;
+        margin: 0;
+        background-color: black;
+      }
+      .clavier {
+        display: flex;
+        gap: 10px;
+        margin-bottom: 50px;
+      }
+
+      .touche {
+        width: 100px;
+        height: 200px;
+        background-color: white;
+        transition: all 0.25s;
+        cursor: pointer;
+      }
+
+      .touche:hover {
+        background-color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <audio src="" id="player"></audio>
+    <div class="clavier">
+      <div class="touche" data-key="87" data-son="a"></div>
+      <div class="touche" data-key="88" data-son="bb"></div>
+      <div class="touche" data-key="67" data-son="c"></div>
+      <div class="touche" data-key="86" data-son="d"></div>
+      <div class="touche" data-key="66" data-son="e"></div>
+      <div class="touche" data-key="78" data-son="eb"></div>
+      <div class="touche" data-key="188" data-son="f"></div>
+      <div class="touche" data-key="186" data-son="g"></div>
+    </div>
+
+    <script src="main.js"></script>
+  </body>
+</html>

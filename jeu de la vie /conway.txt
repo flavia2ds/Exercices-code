@@ -1,0 +1,18 @@
+
+HTML
+-créer une div qui à la classe board et qui a un ID board
+
+CSS
+-body : centrer le board dans la page
+-board : display flex pour que les éléments se mette les uns à la suite des autres et qu'il passent à la ligne, dimension width et height
+
+-cell : donner une dimensions width / height, bordure, box-sizing: border-box, couleur de fond
+-alive : background color 
+
+JS
+
+-récupère la div qui a l'ID board
+-définir un nombre de cellules à créer taille du board / taille cellules
+
+-créer les cellules dynamiquement (boucle, createElement)
+-ajoute les cellules dans le board (appendChild)

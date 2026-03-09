@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Les tableaux</title>
+
+    <style>
+      body {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        background-color: black;
+      }
+
+      .carte {
+        background-color: rgb(255, 0, 0);
+        border-radius: 30px;
+
+        width: 300px;
+        height: 400px;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+      }
+
+      .valeur {
+        font-size: 250px;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        color: white;
+      }
+
+      .couleur {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        font-size: 50px;
+      }
+
+      .btn {
+        margin: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="carte">
+      <div class="couleur"></div>
+      <div class="valeur"></div>
+    </div>
+
+    <button class="btn">nouvelle carte</button>
+
+    <script>
+      // html elements
+      let couleur = document.querySelector(".couleur");
+      let valeur = document.querySelector(".valeur");
+      let btn = document.querySelector(".btn");
+
+      // array
+      let tabCouleur = ["♠️", "❤️", "♦️", "♣️"];
+
+      let tabValeur = [
+        "A",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8",
+        "9",
+        "10",
+        "V",
+        "D",
+        "R",
+      ];
+
+      console.log(couleur, valeur);
+
+      //Math.random() donne une valeur aléatoire entre 0 et 1
+      console.log(Math.random());
+
+      let random = Math.random();
+
+      //Math.floor() vers le bas, Math.ceil() vers le haut, Math.round() arrondi
+      console.log(
+        random,
+        Math.floor(random),
+        Math.ceil(random),
+        Math.round(random)
+      );
+
+      //tire une valeur au hasard
+
+      let tirage = () => {
+        let tirageValeur = Math.floor(Math.random() * tabValeur.length);
+        let tirageCouleur = Math.floor(Math.random() * tabCouleur.length);
+
+        console.log(tirageValeur);
+        console.log(tabValeur[tirageValeur]);
+
+        valeur.innerText = tabValeur[tirageValeur];
+        couleur.innerText = tabCouleur[tirageCouleur];
+      };
+
+      btn.addEventListener("click", tirage);
+      tirage();
+    </script>
+  </body>
+</html>

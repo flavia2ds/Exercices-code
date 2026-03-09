@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Jeu des 3 Dés</title>
+
+    <style>
+      body {
+        font-family: Arial, Helvetica, sans-serif;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        background-color: rgb(19, 10, 98);
+      }
+
+      .dés__container {
+        display: flex;
+        gap: 20px;
+        margin-bottom: 20px;
+      }
+      .de {
+        width: 100px;
+        height: 100px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: orange;
+        border-radius: 10px;
+        box-shadow: 5px 5px 10px black;
+        font-size: 50px;
+        font-weight: 700;
+      }
+
+      .btn {
+        background-color: orange;
+        color: white;
+        padding: 15px 30px;
+        border-radius: 10px;
+        font-size: 20px;
+        border: none;
+        cursor: pointer;
+      }
+
+      .btn:disabled {
+        background-color: gray;
+      }
+
+      .resultat {
+        margin: 20px;
+        font-size: 60px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Jeu des 3 Dés</h1>
+
+    <div class="dés__container">
+      <div class="de" id="d1">0</div>
+      <div class="de" id="d2">0</div>
+      <div class="de" id="d3">0</div>
+    </div>
+
+    <button class="btn">LANCEZ</button>
+
+    <div class="resultat"></div>
+
+    <script>
+      let d1 = document.querySelector("#d1");
+      let d2 = document.querySelector("#d2");
+      let d3 = document.querySelector("#d3");
+      let btn = document.querySelector(".btn");
+      let resultat = document.querySelector(".resultat");
+
+      let lancerDés = () => {
+        //si btn désactiver rien faire
+        if (btn.disabled) return;
+
+        //tirage des 3 dés
+        let t1 = Math.floor(Math.random() * 6) + 1;
+        let t2 = Math.floor(Math.random() * 6) + 1;
+        let t3 = Math.floor(Math.random() * 6) + 1;
+
+        d1.innerText = t1;
+        d2.innerText = t2;
+        d3.innerText = t3;
+
+        let tab = [t1, t2, t3];
+        let gagne = tab.includes(1) && tab.includes(2) && tab.includes(4);
+
+        if (gagne) {
+          resultat.innerText = "🏅🎉 GAGNE!!";
+          resultat.style.color = "green";
+
+          btn.disabled = true;
+        } else {
+          resultat.innerText = "😔 PERDU..";
+          resultat.style.color = "red";
+        }
+      };
+
+      btn.addEventListener("click", lancerDés);
+    </script>
+  </body>
+</html>
